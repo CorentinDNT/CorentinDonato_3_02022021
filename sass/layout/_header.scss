@@ -1,0 +1,13 @@
+.header {
+    background-color: white;
+    height: 65px;
+    position: fixed;
+    width: 100%;
+    @include flexMid;
+    .arrow {
+        font-size: 180%;
+        position: relative;
+        right: 60px;
+        color: rgba(0, 0, 0, 0.750);
+    }
+}

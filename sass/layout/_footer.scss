@@ -1,0 +1,21 @@
+.footer {
+    height: 100%;
+    padding: 30px;
+    background-color: #353535;
+    img {
+        height: 15px;
+        width: 100px;
+        background-color: white;
+        margin: 0 0 0 -19px;
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        &__item {
+            color: white;
+            margin-left: -55px;
+        }
+    }
+}
+//footer__list__item footer__list__item--4

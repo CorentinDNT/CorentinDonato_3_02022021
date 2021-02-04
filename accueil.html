@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>OhMyFood!</title>
+</head>
+<body>
+    <header class="header"><a href="accueil.html"><img src="./public/img/ohmyfood@2x.svg" alt="ohmyfood"></a></header>
+    <form method="GET" action="accueil.html" class="formulaire">
+        <div class="formm__div">
+            <label for="form-paris"><i class="fas fa-map-marker-alt"></i>
+                <input type="text" id="form-paris" value="Paris, Belleville">
+            </label>
+        </div>
+            <h2>Réservez le menu qui vous convient</h2>
+            <h3>Découvrez des restaurants d'exception, séléctionnés par nos soins.</h3>
+            <button type="submit">Explorer nos restaurants</button>
+    </form>
+    <div class="fonctionnement">
+        <h2>Fonctionnement</h2>
+        <a href="#resto" class="fonctionnement__btn"><span class="circle"></span><p class="fonctionnement__btn__number">1</p><i class="item fas fa-mobile-alt"></i><p class="fonctionnement__btn__text">Choisissez un restaurent</p></a>
+        <div class="fonctionnement__btn"><span class="circle"></span><p class="fonctionnement__btn__number">2</p><i class="item fas fa-bars"></i><p class="fonctionnement__btn__text">Composez votre menu</p></div>
+        <div class="fonctionnement__btn"><span class="circle"></span><p class="fonctionnement__btn__number">3</p><i class="item fas fa-store"></i><p class="fonctionnement__btn__text">Dégustez au restaurant</p></div>
+    </div>
+    <section class="restaurants" id="resto">
+        <h2>Restaurants</h2>
+        <a href="menu-palette.html" class="restaurants__restaurant restaurants__restaurant--palette">
+            <figure class="restaurants__restaurant__figure">
+                <img src="./public/img/palette-du-gout.jpg" alt="">
+                <figcaption class="restaurants__restaurant__figure__desc">
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+                </figcaption>
+            </figure>
+        </a>
+        <a href="" class="restaurants__restaurant restaurants__restaurant--lanote">
+            <figure class="restaurants__restaurant__figure">
+                <img src="./public/img/la-note.jpg" alt="">
+                <figcaption class="restaurants__restaurant__figure__desc">
+                    <h3>La note enchantée</h3>
+                    <p>Charonne</p>
+                </figcaption>
+            </figure>
+        </a>
+        <a href="" class="restaurants__restaurant restaurants__restaurant--francais">
+            <figure class="restaurants__restaurant__figure">
+                <img src="./public/img/la-francaise.jpg" alt="">
+                <figcaption class="restaurants__restaurant__figure__desc">
+                    <h3>À la française</h3>
+                    <p>Cité Rouge</p>
+                </figcaption>
+            </figure>
+        </a>
+        <a href="" class="restaurants__restaurant restaurants__restaurant--delice">
+            <figure class="restaurants__restaurant__figure">
+                <img src="./public/img/delice-des-sens.jpg" alt="">
+                <figcaption class="restaurants__restaurant__figure__desc">
+                    <h3>Le délice des sens</h3>
+                    <p>Folie-Méricourt</p>
+                </figcaption>
+            </figure>
+        </a>
+    </section>
+    <footer class="footer">
+        <img src="./public/img/ohmyfood@2x.svg" alt="ohmyfood">
+        <ul class="footer__list">
+            <li class="footer__list__item footer__list__item--1"><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+            <li class="footer__list__item footer__list__item--2"><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
+            <li class="footer__list__item footer__list__item--3">Mentions légales</li>
+            <li class="footer__list__item footer__list__item--4">Contact</li>
+        </ul>
+    </footer>
+</body>
+</html>
