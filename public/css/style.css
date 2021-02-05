@@ -2,6 +2,7 @@
   background-color: white;
   height: 65px;
   position: fixed;
+  z-index: 50;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -174,192 +175,141 @@
   margin: 25px 0 10px 0;
 }
 
-.backgroundimg {
-  padding-top: 65px;
+.bg-img {
   width: 100%;
-}
-
-.image {
-  padding-top: 240px;
-  background: url(../../public/img/palette-du-gout.jpg) no-repeat;
-  background-size: 100%;
+  height: 280px;
+  padding-top: 65px;
 }
 
 .content {
-  background-color: #F6F6F6;
-  margin-top: -30px;
-  padding-top: 20px;
-  background-color: white;
-  border-radius: 30px 30px 0 0;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -50px;
+  border-radius: 30px 30px 0 0;
+  background: #F6F6F6;
+  z-index: 2;
 }
-.content h1 {
-  margin: 0 0 30px 20px;
+.content__h1 {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.content__h1__like {
+  font-size: 1rem;
+  color: #2c2c2c;
+  background: none;
+  cursor: pointer;
+  margin: 0;
+  border: none;
+  outline-style: none;
 }
 .content__title {
-  margin: 50px 10px 0;
-  padding-right: 70%;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 .content__entrees {
-  display: flex;
-  flex-direction: column;
-  justify-content: content;
-  align-items: center;
+  width: 90%;
 }
 .content__entrees__item {
+  width: 100%;
+  margin: 10px 0;
+  box-shadow: 4px 4px 10px #d1d1d1;
+  border-radius: 20px;
+  height: 70px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 26px;
-  height: 50px;
-  background-color: white;
-  padding: 5px 0 5px 15px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15), -1px -1px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 19px;
-  margin: 6px 0;
-  width: 90%;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex: none;
 }
-.content__entrees__item h3 {
+.content__entrees__item__title3 {
   font-size: 15px;
-}
-.content__entrees__item p {
-  font-size: 13px;
-}
-.content__entrees__item__price--1 {
-  position: relative;
   font-weight: bold;
-  font-size: 12px;
-  right: -160px;
+  margin: 0;
+  padding-left: 20px;
+  text-overflow: ellipsis;
+  width: calc(85% - 20px);
+  margin-top: 10px;
 }
-.content__entrees__item__price--2 {
-  position: relative;
-  font-weight: bold;
-  font-size: 12px;
-  right: -120px;
+.content__entrees__item__text {
+  font-size: 15px;
+  padding-left: 20px;
+  width: calc(85% - 20px);
+  margin: 0;
+  text-overflow: ellipsis;
 }
-.content__entrees__item__price--3 {
-  position: relative;
-  font-weight: bold;
-  font-size: 12px;
-  right: -80px;
+.content__entrees__item__text__price {
+  padding-right: 20px;
+  width: calc(15% - 20px);
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.content {
-  background-color: #F6F6F6;
-  margin-top: -30px;
-  padding-top: 20px;
-  background-color: white;
-  border-radius: 30px 30px 0 0;
-  display: flex;
-  flex-direction: column;
-}
 .content__plate {
-  display: flex;
-  flex-direction: column;
-  justify-content: content;
-  align-items: center;
+  width: 90%;
 }
 .content__plate__item {
+  width: 100%;
+  margin: 10px 0;
+  box-shadow: 4px 4px 10px #d1d1d1;
+  border-radius: 20px;
+  height: 70px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 26px;
-  height: 50px;
-  background-color: white;
-  padding: 5px 0 5px 15px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15), -1px -1px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 19px;
-  margin: 6px 0;
-  width: 90%;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex: none;
+  overflow: hidden;
 }
-.content__plate__item h3 {
+.content__plate__item__title3 {
   font-size: 15px;
-}
-.content__plate__item p {
-  font-size: 13px;
-}
-.content__plate__item__price--1 {
-  position: relative;
   font-weight: bold;
-  font-size: 12px;
-  right: -160px;
+  margin: 10px 0 0 0;
+  padding-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(85% - 20px);
+  height: 40%;
 }
-.content__plate__item__price--2 {
-  position: relative;
-  font-weight: bold;
-  font-size: 12px;
-  right: -120px;
-}
-.content__plate__item__price--3 {
-  position: relative;
-  font-weight: bold;
-  font-size: 12px;
-  right: -80px;
-}
-
-.content {
-  background-color: #F6F6F6;
-  margin-top: -30px;
-  padding-top: 20px;
-  background-color: white;
-  border-radius: 30px 30px 0 0;
-  display: flex;
-  flex-direction: column;
-}
-.content__desserts {
-  display: flex;
-  flex-direction: column;
-  justify-content: content;
-  align-items: center;
-}
-.content__desserts__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 26px;
-  height: 50px;
-  background-color: white;
-  padding: 5px 0 5px 15px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15), -1px -1px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 19px;
-  margin: 6px 0;
-  width: 90%;
-}
-.content__desserts__item h3 {
+.content__plate__item__text {
   font-size: 15px;
-}
-.content__desserts__item p {
-  font-size: 13px;
-}
-.content__desserts__item__price--1 {
-  position: relative;
-  font-weight: bold;
-  font-size: 12px;
-  right: -160px;
-}
-.content__desserts__item__price--2 {
-  position: relative;
-  font-weight: bold;
-  font-size: 12px;
-  right: -120px;
-}
-.content__desserts__item__price--3 {
-  position: relative;
-  font-weight: bold;
-  font-size: 12px;
-  right: -80px;
-}
-
-* {
   margin: 0;
+  padding-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(85% - 20px);
+  height: 40%;
+}
+.content__plate__item__price {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0;
+  height: 60%;
+  padding-right: 20px;
+  width: calc(15% - 20px);
+}
+.content__title {
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: -1px;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
