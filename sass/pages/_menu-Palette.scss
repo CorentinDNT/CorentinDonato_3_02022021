@@ -2,6 +2,7 @@
     width: 100%;
     height: 280px;
     padding-top: 65px;
+    object-fit: cover;
 }
 .content {
     display: flex;
@@ -13,6 +14,10 @@
     border-radius: 30px 30px 0 0;
     background: #F6F6F6;
     z-index: 2;
+    &__title {
+        text-transform: uppercase;
+        font-weight: 500;
+    }
     &__h1 {
         font-family: 'Shrikhand', cursive;
         display: flex;
@@ -22,12 +27,12 @@
         width: 90%;
         &__like {
             font-size: 1rem;
-            color: #2c2c2c;
             background: none;
-            cursor: pointer;
-            margin: 0;
             border: none;
+            color: #2c2c2c;
             outline-style: none;
+            margin: 0;
+            cursor: pointer;
         }
     }
     &__title {
@@ -39,57 +44,12 @@
         &__item {
             width: 100%;
             margin: 10px 0;
-            box-shadow: 4px 4px 10px #d1d1d1;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.150), -1px -1px 15px rgba(0, 0, 0, 0.150 );
             border-radius: 20px;
             height: 70px;
             display: flex;
             flex-flow: column wrap;
             justify-content: space-evenly;
-            align-items: flex-start;
-            flex: none;
-            &__title3 {
-                font-size: 15px;
-                font-weight: bold;
-                margin: 0;
-                padding-left: 20px;
-                text-overflow: ellipsis;
-                width: calc(85% - 20px);
-                margin-top: 10px;
-            }
-            &__text {
-                font-size: 15px;
-                padding-left: 20px;
-                width: calc(85% - 20px);
-                margin: 0;
-                text-overflow: ellipsis;
-                &__price {
-                    padding-right: 20px;
-                    width: calc(15% - 20px);
-                    margin: 0;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: center;
-                    align-items: flex-end;
-                }
-            }
-        }
-    }
-}
-.content {
-    &__plate {
-        width: 90%;
-        &__item {
-            width: 100%;
-            margin: 10px 0;
-            box-shadow: 4px 4px 10px #d1d1d1;
-            border-radius: 20px;
-            height: 70px;
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: space-evenly;
-            align-items: flex-start;
-            flex: none;
-            overflow: hidden;
             &__title3 {
                 font-size: 15px;
                 font-weight: bold;
@@ -102,6 +62,7 @@
                 height: 40%;
             }
             &__text {
+                font-family: 'Roboto', sans-serif;
                 font-size: 15px;
                 margin: 0;
                 padding-left: 20px;
@@ -123,9 +84,107 @@
             }
         }
     }
-    &__title {
-        text-transform: uppercase;
-        font-weight: 500;
+    &__plate {
+        width: 90%;
+        &__item {
+            width: 100%;
+            margin: 10px 0;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.150), -1px -1px 15px rgba(0, 0, 0, 0.150 );
+            border-radius: 20px;
+            height: 70px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            &__title3 {
+                font-size: 15px;
+                font-weight: bold;
+                margin: 10px 0 0 0;
+                padding-left: 20px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: calc(85% - 20px);
+                height: 40%;
+            }
+            &__text {
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                margin: 0;
+                padding-left: 20px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: calc(85% - 20px);
+                height: 40%;
+            }
+            &__price {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-end;
+                align-items: flex-end;
+                margin: 0;
+                height: 60%;
+                padding-right: 20px;
+                width: calc(15% - 20px);
+            }
+        }
+    }
+    &__desserts {
+        width: 90%;
+        &__item {
+            width: 100%;
+            margin: 10px 0;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.150), -1px -1px 15px rgba(0, 0, 0, 0.150 );
+            border-radius: 20px;
+            height: 70px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            &__title3 {
+                font-size: 15px;
+                font-weight: bold;
+                margin: 10px 0 0 0;
+                padding-left: 20px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: calc(85% - 20px);
+                height: 40%;
+            }
+            &__text {
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                margin: 0;
+                padding-left: 20px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: calc(85% - 20px);
+                height: 40%;
+            }
+            &__price {
+                @include f-bx(row, nowrap, flex-end, flex-end);
+                /*display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-end;
+                align-items: flex-end;*/
+                margin: 0;
+                height: 60%;
+                padding-right: 20px;
+                width: calc(15% - 20px);
+            }
+        }
+    }
+    &__btn {
+        background: linear-gradient(to bottom right, #EF74DA, #9F5adc);
+        border-radius: 25px;
+        outline-style: none;
+        color: white;
+        border: none;
+        height: 50px;
+        width: 185px;
+        margin-top: 30px;
     }
 }
-//plate__item__price
+//content__desserts__item__text
+//content__desserts__item__price

@@ -1,12 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <title>Menu - La note enchantée</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
+    <title>Menu - La Note Enchantée</title>
 </head>
 <body>
-    
+    <header class="header"><a class="arrow" href="../index.html#ancrelanote"><i class="fas fa-arrow-left"></i></a><a href="../index.html"><img src="../public/img/ohmyfood@2x.svg" alt="ohmyfood"></a></header>
+    <img class="bg-img" src="../public/img/la-note.jpg" alt="">
+    <section class="content">
+        <h1 class="content__h1">La Note Enchantée
+            <button type="button" class="content__h1__like"><i class="far fa-heart"></i></button>
+        </h1>
+        <section class="content__entrees">
+            <h2 class="content__title">entrées</h2>
+            <div class="content__entrees__item"><h3 class="content__entrees__item__title3">Ravioles de foie gras </h3><p class="content__entrees__item__text">Accompagnés de leur crème à la truffe<p class="content__entrees__item__price">25€</p></p></div>
+            <div class="content__entrees__item"><h3 class="content__entrees__item__title3">Caviar osciètre</h3><p class="content__entrees__item__text">Sur blini à la farine de blé noir<p class="content__entrees__item__price">35€</p></p></div>
+            <div class="content__entrees__item"><h3 class="content__entrees__item__title3">Homard et espuma de potiron</h3><p class="content__entrees__item__text">Mariné aux zestes d'orange<p class="content__entrees__item__price">20€</p></p></div>
+            <div class="content__entrees__item"><h3 class="content__entrees__item__title3">Foie gras de canard cuit entier</h3><p class="content__entrees__item__text">Confiture de figue et pain toasté<p class="content__entrees__item__price">35€</p></p></div>
+        </section>
+        <section class="content__plate">
+            <h2 class="content__title">plats</h2>
+            <div class="content__plate__item"><h3 class="content__plate__item__title3">Noix de coquilles Saint-Jacques</h3><p class="content__plate__item__text">Sur lit de purée de céleri-rave<p class="content__plate__item__price">40€</p></p></div>
+            <div class="content__plate__item"><h3 class="content__plate__item__title3">Langoustine poêlée</h3><p class="content__plate__item__text">Purée de patate douce<p class="content__plate__item__price">35€</p></p></div>
+            <div class="content__plate__item"><h3 class="content__plate__item__title3">Mijoté de queue de boeuf </h3><p class="content__plate__item__text">Et riz sauvage aux zestes de citron<p class="content__plate__item__price">44€</p></p></div>
+        </section>
+        <section class="content__desserts">
+            <h2 class="content__title">désserts</h2>
+            <div class="content__desserts__item"><h3 class="content__desserts__item__title3">Macaron noisette et chocolat</h3><p class="content__plate__item__text">Glace au caramel brun et sel de Guérande<p class="content__desserts__item__price">18€</p></p></div>
+            <div class="content__desserts__item"><h3 class="content__desserts__item__title3">Baba au rhum revisité </h3><p class="content__plate__item__text">Avec son coulis de citron<p class="content__desserts__item__price">22€</p></p></div>
+            <div class="content__desserts__item"><h3 class="content__desserts__item__title3">Tarte au citron meringuée </h3><p class="content__plate__item__text">Déstructurée<p class="content__desserts__item__price">23€</p></p></div>
+        </section>
+        <input type="button" class="content__btn" value="Commander">
+    </section>
+    <footer class="footer">
+        <a href="../index.html" class="ohmyfooter">OhMyFood</a>
+        <ul class="footer__list">
+            <li class="footer__list__item footer__list__item--1"><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+            <li class="footer__list__item footer__list__item--2"><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
+            <li class="footer__list__item footer__list__item--3">Mentions légales</li>
+            <li class="footer__list__item footer__list__item--4">Contact</li>
+        </ul>
+    </footer>
 </body>
 </html>

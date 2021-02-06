@@ -3,3 +3,10 @@
     justify-content: center;
     align-items: center;
 }
+@mixin f-bx($fdir: column, $fwrap: nowrap, $jstf: center, $aln: center) {
+    display: flex;
+    flex-direction: $fdir;
+    flex-wrap: $fwrap;
+    justify-content: $jstf;
+    align-items: $aln;
+}
