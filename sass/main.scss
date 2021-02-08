@@ -1,8 +1,10 @@
 @import "./utils/mixins";
 
+@import "./utils/animations";
+
 @import "./layout/header";
 @import "./layout/footer";
 
 @import "./pages/accueil";
-@import "./pages/menu-Palette";
+@import "./pages/menu";
 @import "./base/base";
