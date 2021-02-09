@@ -1,14 +1,10 @@
 .bg-img {
-    width: 100%;
-    height: 280px;
+    @include wh(100%, 280px);
     padding-top: 65px;
     object-fit: cover;
 }
 .content {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    @include f-bx(column, nowrap, center, center);
     position: relative;
     top: -50px;
     border-radius: 30px 30px 0 0;
@@ -26,15 +22,6 @@
         align-items: center;
         justify-content: space-between;
         width: 90%;
-        &__like {
-            font-size: 1rem;
-            background: none;
-            border: none;
-            color: #2c2c2c;
-            outline-style: none;
-            margin: 0;
-            cursor: pointer;
-        }
     }
     &__title {
         text-transform: uppercase;
@@ -43,14 +30,38 @@
     &__entrees {
         width: 90%;
         &__item {
-            width: 100%;
+            @include wh(100%, 70px);
             margin: 10px 0;
             box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.150), -1px -1px 15px rgba(0, 0, 0, 0.150 );
             border-radius: 20px;
-            height: 70px;
             display: flex;
             flex-flow: column wrap;
             justify-content: space-evenly;
+            overflow: hidden;
+            &:hover {
+                & > .content__entrees__item__title3,
+                & > .content__entrees__item__text {
+                    width: calc(65% - 20px);
+                    transition: width 0.3s;
+                }
+                & > .content__entrees__item__btn i {
+                    transform: rotate(360deg);
+                    transition: all .6s;
+                }
+            }
+            & > .content__entrees__item__title3,
+            & > .content__entrees__item__text {
+                transition: width .3s;
+            }
+            &__btn{
+                @include wh(20%, 100%);
+                 border-radius: 0 20px 20px 0;
+                 background-color: #99E2D0;
+                 border: none;
+                 outline-style: none;
+                 color: white;
+                 font-size: 1.2rem;
+            }
             &__title3 {
                 font-size: 15px;
                 font-weight: bold;
@@ -59,8 +70,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                width: calc(85% - 20px);
-                height: 40%;
+                @include wh(calc(85% - 20px), 40%);
             }
             &__text {
                 font-family: 'Roboto', sans-serif;
@@ -70,32 +80,51 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                width: calc(85% - 20px);
-                height: 40%;
+                @include wh(calc(85% - 20px), 40%);
             }
             &__price {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: flex-end;
-                align-items: flex-end;
+                @include f-bx(row, nowrap, flex-end, flex-end);
                 margin: 0;
-                height: 60%;
                 padding-right: 20px;
-                width: calc(15% - 20px);
+                @include wh(calc(15% - 20px), 60%);
             }
         }
     }
     &__plate {
         width: 90%;
         &__item {
-            width: 100%;
+            @include wh(100%, 70px);
             margin: 10px 0;
             box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.150), -1px -1px 15px rgba(0, 0, 0, 0.150 );
             border-radius: 20px;
-            height: 70px;
             display: flex;
             flex-flow: column wrap;
             justify-content: space-evenly;
+            overflow: hidden;
+            &:hover {
+                & > .content__plate__item__title3,
+                & > .content__plate__item__text {
+                    width: calc(65% - 20px);
+                    transition: width 0.3s;
+                }
+                & > .content__plate__item__btn i {
+                    transform: rotate(360deg);
+                    transition: all .6s;
+                }
+            }
+            & > .content__plate__item__title3,
+            & > .content__plate__item__text {
+                transition: width .3s;
+            }
+            &__btn{
+                @include wh(20%, 100%);
+                 border-radius: 0 20px 20px 0;
+                 background-color: #99E2D0;
+                 border: none;
+                 outline-style: none;
+                 color: white;
+                 font-size: 1.2rem;
+            }
             &__title3 {
                 font-size: 15px;
                 font-weight: bold;
@@ -104,8 +133,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                width: calc(85% - 20px);
-                height: 40%;
+                @include wh(calc(85% - 20px), 40%);
             }
             &__text {
                 font-family: 'Roboto', sans-serif;
@@ -115,14 +143,10 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                width: calc(85% - 20px);
-                height: 40%;
+                @include wh(calc(85% - 20px), 40%);
             }
             &__price {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: flex-end;
-                align-items: flex-end;
+                @include f-bx(row, nowrap, flex-end, flex-end);
                 margin: 0;
                 height: 60%;
                 padding-right: 20px;
@@ -133,14 +157,38 @@
     &__desserts {
         width: 90%;
         &__item {
-            width: 100%;
+            @include wh(100%, 70px);
             margin: 10px 0;
             box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.150), -1px -1px 15px rgba(0, 0, 0, 0.150 );
             border-radius: 20px;
-            height: 70px;
             display: flex;
             flex-flow: column wrap;
             justify-content: space-evenly;
+            overflow: hidden;
+            &:hover {
+                & > .content__desserts__item__title3,
+                & > .content__desserts__item__text {
+                    width: calc(65% - 20px);
+                    transition: width 0.3s;
+                }
+                & > .content__desserts__item__btn i {
+                    transform: rotate(360deg);
+                    transition: all .6s;
+                }
+            }
+            & > .content__desserts__item__title3,
+            & > .content__desserts__item__text {
+                transition: width .3s;
+            }
+            &__btn{
+                @include wh(20%, 100%);
+                 border-radius: 0 20px 20px 0;
+                 background-color: #99E2D0;
+                 border: none;
+                 outline-style: none;
+                 color: white;
+                 font-size: 1.2rem;
+            }
             &__title3 {
                 font-size: 15px;
                 font-weight: bold;
@@ -149,8 +197,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                width: calc(85% - 20px);
-                height: 40%;
+                @include wh(calc(85% - 20px), 40%);
             }
             &__text {
                 font-family: 'Roboto', sans-serif;
@@ -160,32 +207,14 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                width: calc(85% - 20px);
-                height: 40%;
+                @include wh(calc(85% - 20px), 40%);
             }
             &__price {
                 @include f-bx(row, nowrap, flex-end, flex-end);
-                /*display: flex;
-                flex-flow: row nowrap;
-                justify-content: flex-end;
-                align-items: flex-end;*/
                 margin: 0;
-                height: 60%;
                 padding-right: 20px;
-                width: calc(15% - 20px);
+                @include wh(calc(15% - 20px), 60%);
             }
         }
     }
-    &__btn {
-        background: linear-gradient(to bottom right, #EF74DA, #9F5adc);
-        border-radius: 25px;
-        outline-style: none;
-        color: white;
-        border: none;
-        height: 50px;
-        width: 185px;
-        margin-top: 30px;
-    }
 }
-//content__desserts__item__text
-//content__desserts__item__price

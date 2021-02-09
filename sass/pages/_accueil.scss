@@ -1,6 +1,5 @@
 //fromulaire__form__label
 .formm__div {
-    padding: 0 0 0 13%;
     background-color: #EAEAEA;
     width: 100%;
     @include flexMid;
@@ -54,9 +53,6 @@
     align-items: center;
     flex-direction: column;
     height: 440px;
-    h2 {
-        margin: 40px 0 20px -160px;
-    }
     &__btn {
         display: flex;
         flex-direction: row;
@@ -91,7 +87,6 @@
         margin-left: -10px;
     }
 }
-//--------------------------------------------------------------------------------------
 .restaurants {
     display: flex;
     flex-direction: column;
@@ -149,14 +144,6 @@
             border-radius: 3px;
             padding-top: 5px;
         }
-        button {
-            position: absolute;
-                top: 195px;
-                right: 15px;
-            font-size: 27px;
-            background: transparent;
-            border: none;
-            outline-style: none;
-        }
     }
 }
+//@mixin f-bx($fdir: column, $fwrap: nowrap, $jstf: center, $aln: center)

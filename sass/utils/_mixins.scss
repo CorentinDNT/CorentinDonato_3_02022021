@@ -10,3 +10,18 @@
     justify-content: $jstf;
     align-items: $aln;
 }
+@mixin wh($width, $heigt: $width) {
+    width: $width;
+    height: $heigt;
+}
+
+@mixin media($min-width) {
+    @media only screen and (min-width: $min-width) {
+      @content;
+    }
+}
+
+@mixin btnstyle {
+    border: none;
+    outline-style: none;
+}

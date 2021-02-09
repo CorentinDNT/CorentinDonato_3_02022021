@@ -1,0 +1,56 @@
+.btncoeur {
+    height: 40px;
+    width: 40px;
+    background: none;
+    @include btnstyle;
+    cursor: pointer;
+    path {
+        fill: transparent;
+        stroke: #000;
+        stroke-width: 10;
+    }
+    &:hover path,
+    &:active path,
+    &:focus path{
+        fill: #EF74DA;
+        transition: fill .7s;
+    }
+}
+.restaurants {
+    &__restaurant {
+        button {
+            position: absolute;
+                top: 195px;
+                right: 15px;
+            height: 40px;
+            width: 40px;
+            background: none;
+            @include btnstyle;
+            cursor: pointer;
+            path {
+                fill: transparent;
+                stroke: #000;
+                stroke-width: 10;
+            }
+            &:hover path,
+            &:active path,
+            &:focus path{
+                fill: #EF74DA;
+                transition: fill .7s;
+            }
+        }
+    }
+}
+.content {
+    &__btn {
+        background: linear-gradient(to bottom right, #EF74DA, #9F5adc);
+        border-radius: 25px;
+        color: white;
+        @include btnstyle;
+        height: 50px;
+        width: 185px;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+}
+//content__entrees__item__btn
