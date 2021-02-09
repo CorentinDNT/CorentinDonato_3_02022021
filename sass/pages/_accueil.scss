@@ -146,4 +146,21 @@
         }
     }
 }
+@include media(765px) {
+    .restaurants {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        #ancrefrance,
+        #ancredelice {
+            width: 43%;
+            margin: 30px auto;
+        }
+    }
+}
+@include media(908px) {
+    .formulaire {
+        flex-direction: column;
+    }
+}
 //@mixin f-bx($fdir: column, $fwrap: nowrap, $jstf: center, $aln: center)

@@ -218,3 +218,42 @@
         }
     }
 }
+
+@include media(765px) {
+    .content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__entrees {
+            width: 43%;
+        }
+        &__plate {
+            width: 43%;
+        }
+        &__desserts {
+            width: 75%;
+        }
+        &__btn {
+            margin: 25px 150px;
+        }
+    }
+}
+@include media(1440px) {
+    .content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__entrees {
+            width: 30%;
+        }
+        &__plate {
+            width: 30%;
+        }
+        &__desserts {
+            width: 30%;
+        }
+        &__btn {
+            margin: 25px 150px;
+        }
+    }
+}
