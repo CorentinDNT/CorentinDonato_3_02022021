@@ -3,7 +3,7 @@
     height: 65px;
     position: fixed;
     z-index: 50;
-    width: 100%;
+    width: 100vw;
     @include flexMid;
     .arrow {
         font-size: 180%;
