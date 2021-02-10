@@ -158,9 +158,31 @@
         }
     }
 }
-@include media(908px) {
+@include media(900px) {
     .formulaire {
         flex-direction: column;
+    }
+}
+@include media(1024px) {
+    .restaurants {
+        h2 {
+            margin: 20px 1200px 0 100px;
+        }
+        &__restaurant {
+            &__figure {
+                height: 400px;
+            }
+        }
+        .btncoeur {
+            position: absolute;
+                top: 300px;
+        }
+        justify-content: space-between;
+        #ancrelanote,
+        #lessens {
+            width: 43%;
+            margin: 30px auto;
+        }
     }
 }
 //@mixin f-bx($fdir: column, $fwrap: nowrap, $jstf: center, $aln: center)

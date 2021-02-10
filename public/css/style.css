@@ -28,7 +28,81 @@
   width: 40px;
 }
 
-@keyframes heartlike {}
+.loader {
+  animation: disappear 0.05s 5s ease-in forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 200px;
+  padding-right: 100px;
+  font-family: "Bebas Neue", cursive;
+  color: white;
+  font-size: 2rem;
+  background-color: black;
+}
+.loader p {
+  padding-top: 30px;
+}
+.loader .icon {
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+.loader .icon path {
+  fill: transparent;
+  stroke-width: 2;
+  stroke: #99E2D0;
+  stroke-dashoffset: 1560;
+  stroke-dasharray: 1560;
+  animation: loading 3.5s ease-out forwards infinite;
+}
+.loader .icon2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  bottom: 28%;
+  left: 40%;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+.loader .icon2 path {
+  fill: transparent;
+  stroke-width: 10;
+  stroke: #99E2D0;
+  stroke-dashoffset: 1560;
+  stroke-dasharray: 1560;
+  animation: loading 3.5s ease-out forwards infinite;
+}
+
+@keyframes disappear {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes loading {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 1560;
+  }
+  100% {
+    stroke-dashoffset: 3120;
+  }
+}
 @keyframes rebond {
   0% {
     transform: translateX(100%);
@@ -342,9 +416,29 @@
     margin: 30px auto;
   }
 }
-@media only screen and (min-width: 908px) {
+@media only screen and (min-width: 900px) {
   .formulaire {
     flex-direction: column;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .restaurants {
+    justify-content: space-between;
+  }
+  .restaurants h2 {
+    margin: 20px 1200px 0 100px;
+  }
+  .restaurants__restaurant__figure {
+    height: 400px;
+  }
+  .restaurants .btncoeur {
+    position: absolute;
+    top: 300px;
+  }
+  .restaurants #ancrelanote,
+.restaurants #lessens {
+    width: 43%;
+    margin: 30px auto;
   }
 }
 .bg-img {
@@ -629,6 +723,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
 a {

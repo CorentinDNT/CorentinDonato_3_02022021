@@ -8,9 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>OhMyFood!</title>
 </head>
 <body>
+    <div class="loader">
+        <svg class="icon" viewBox="-5 -10 120 120" xmlns="http://www.w3.org/2000/svg"><path d="m37 72a35 35 0 1 1 35-35 35.04 35.04 0 0 1 -35 35zm0-68a33 33 0 1 0 33 33 33.037 33.037 0 0 0 -33-33z"/></svg>
+        <p>Chargement de OhMyFood!</p>
+        <svg class="icon2" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -10 380.333 380.333" >
+		<path d="M170.667,0C76.41,0,0,76.41,0,170.667s76.41,170.667,170.667,170.667s170.667-76.41,170.667-170.667S264.923,0,170.667,0z
+			 M170.667,298.667c-70.692,0-128-57.308-128-128s57.308-128,128-128s128,57.308,128,128S241.359,298.667,170.667,298.667z"/></svg>
+    </div>
     <header class="header"><a href="index.html"><img src="./public/img/ohmyfood@2x.svg" alt="ohmyfood"></a></header>
     <form method="GET" action="index.html" class="formulaire">
         <div class="formm__div">
@@ -24,7 +32,7 @@
     </form>
     <div class="fonctionnement">
         <h2>Fonctionnement</h2>
-        <a href="#resto" class="fonctionnement__btn"><span class="circle"></span><p class="fonctionnement__btn__number">1</p><i class="item fas fa-mobile-alt"></i><p class="fonctionnement__btn__text">Choisissez un restaurent</p></a>
+        <a href="#resto" class="fonctionnement__btn"><span class="circle"></span><p class="fonctionnement__btn__number">1</p><i class="item fas fa-mobile-alt"></i><p class="fonctionnement__btn__text">Choisissez un restaurant</p></a>
         <div class="fonctionnement__btn"><span class="circle"></span><p class="fonctionnement__btn__number">2</p><i class="item fas fa-bars"></i><p class="fonctionnement__btn__text">Composez votre menu</p></div>
         <div class="fonctionnement__btn"><span class="circle"></span><p class="fonctionnement__btn__number">3</p><i class="item fas fa-store"></i><p class="fonctionnement__btn__text">Dégustez au restaurant</p></div>
     </div>
@@ -69,7 +77,7 @@
             </a>
             <button class="btncoeur"><svg viewBox="-10 -28 541.00002 512"><path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/></svg></button>
         </section>
-        <section class="restaurants__restaurant">
+        <section class="restaurants__restaurant" id="lessens">
             <a href="./menu/menu-délice.html" class="restaurants__restaurant__link restaurants__restaurant__link--delice">
                 <figure class="restaurants__restaurant__figure">
                     <img src="./public/img/delice-des-sens.jpg" alt="">
