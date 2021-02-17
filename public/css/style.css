@@ -159,6 +159,7 @@
   }
 }
 .btncoeur {
+  position: relative;
   height: 40px;
   width: 40px;
   background: none;
@@ -166,20 +167,36 @@
   outline-style: none;
   cursor: pointer;
 }
-.btncoeur path {
+.btncoeur #svgvide {
+  /* &:hover path,
+      &:active path,
+      &:focus path{
+      } */
+}
+.btncoeur #svgvide path {
   fill: transparent;
   stroke: #000;
   stroke-width: 10;
 }
-.btncoeur:hover path, .btncoeur:active path, .btncoeur:focus path {
-  fill: #EF74DA;
-  transition: fill 0.7s;
+.btncoeur #svgplein {
+  position: absolute;
+  top: 1px;
+  left: 6px;
+  fill: url(#svgGRAD);
+  opacity: 0;
+}
+.btncoeur:hover #svgplein, .btncoeur:active #svgplein, .btncoeur:focus #svgplein {
+  opacity: 1;
+  transition: all 0.3s;
 }
 
-.restaurants__restaurant button {
+.restaurants__restaurant {
+  position: relative;
+}
+.restaurants__restaurant .btnlike {
   position: absolute;
-  top: 195px;
-  right: 15px;
+  bottom: 20px;
+  right: 20px;
   height: 40px;
   width: 40px;
   background: none;
@@ -187,18 +204,31 @@
   outline-style: none;
   cursor: pointer;
 }
-.restaurants__restaurant button path {
+.restaurants__restaurant .btnlike #svgvide {
+  /* &:hover path,
+        &:active path,
+        &:focus path{
+        } */
+}
+.restaurants__restaurant .btnlike #svgvide path {
   fill: transparent;
   stroke: #000;
   stroke-width: 10;
 }
-.restaurants__restaurant button:hover path, .restaurants__restaurant button:active path, .restaurants__restaurant button:focus path {
-  fill: #EF74DA;
-  transition: fill 0.7s;
+.restaurants__restaurant .btnlike #svgplein {
+  position: absolute;
+  top: 1px;
+  left: 6px;
+  fill: url(#svgGRAD);
+  opacity: 0;
+}
+.restaurants__restaurant .btnlike:hover #svgplein, .restaurants__restaurant .btnlike:active #svgplein, .restaurants__restaurant .btnlike:focus #svgplein {
+  opacity: 1;
+  transition: all 0.3s;
 }
 
 .content__btn {
-  background: linear-gradient(to bottom right, #EF74DA, #9F5adc);
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   border-radius: 25px;
   color: white;
   border: none;
@@ -207,6 +237,11 @@
   width: 185px;
   margin-top: 30px;
   cursor: pointer;
+}
+.content__btn:hover {
+  box-shadow: 1px 1px 10px #000000;
+  background: linear-gradient(to bottom right, #ff93e0, #b281ee);
+  transition: all 0.5s;
 }
 
 .header {
